@@ -1,5 +1,5 @@
 require_relative('./corrector')
-
+require_relative('./rental')
 class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id
@@ -11,6 +11,7 @@ class Person < Nameable
     @age = age
     @parent_permision = parent_permision
     @corrector = Corrector.new
+    @rental = []
   end
 
   def of_age?
@@ -23,6 +24,10 @@ class Person < Nameable
 
   def validate_name
     @name = @corrector.correct_name(@name)
+  end
+
+  def add_rental(book, date)
+    Rental.new(date, book, self)
   end
   private :of_age?
 end
