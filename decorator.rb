@@ -4,7 +4,7 @@ class Nameable
   end
 end
 
-class Corrector < Nameable
+class Decorator < Nameable
   attr_accessor :nameable
 
   def initialize(nameable)
@@ -17,13 +17,13 @@ class Corrector < Nameable
   end
 end
 
-class CapitalizeCorrector < Corrector
+class CapitalizeDecorator < Decorator
   def correct_name
     @nameable.correct_name.capitalize
   end
 end
 
-class TrimmerCorrector < Corrector
+class TrimmerDecorator < Decorator
   def correct_name
     @nameable.correct_name.slice(0, 10) unless @nameable.correct_name.length <= 10
   end
