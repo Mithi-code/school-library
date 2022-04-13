@@ -40,6 +40,7 @@ Run using terminal
 👤 **Mithlesh**
 
 - GitHub: [@githubhandle](https://github.com/Mithi-code)
+- Linkdien [@linkdienhandle](https://www.linkedin.com/in/mithicode)
 
 
 ## 🤝 Contributing
